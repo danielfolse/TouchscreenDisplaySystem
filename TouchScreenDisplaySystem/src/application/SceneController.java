@@ -20,6 +20,8 @@ public class SceneController {
 		scene = new Scene(root); 
 		stage = (Stage)((Node)e.getSource()).getScene().getWindow(); 
 		stage.setScene(scene);
+		stage.setMaximized(true);
+		stage.setResizable(true);
 		stage.show();
 	}
 	
@@ -29,6 +31,8 @@ public class SceneController {
 		scene = new Scene(root); 
 		stage = (Stage)((Node)e.getSource()).getScene().getWindow(); 
 		stage.setScene(scene);
+		stage.setMaximized(true);
+		stage.setResizable(true);
 		stage.show();
 	}
 	
@@ -38,6 +42,7 @@ public class SceneController {
 		scene = new Scene(root); 
 		stage = (Stage)((Node)e.getSource()).getScene().getWindow(); 
 		stage.setScene(scene);
+		stage.setMaximized(true);
 		stage.show();
 	}
 	public void goToGraduatePage(ActionEvent e) throws IOException{
@@ -46,6 +51,52 @@ public class SceneController {
 		scene = new Scene(root);
 		stage = (Stage)((Node)e.getSource()).getScene().getWindow();
 		stage.setScene(scene);
+		stage.setMaximized(true);
+		stage.show();
+	}
+	public void goToAcademicsPage(ActionEvent e) throws IOException{
+		String pathOfNewFile = "/pages/academics.fxml";
+		root = FXMLLoader.load(getClass().getResource(pathOfNewFile));
+		scene = new Scene(root);
+		stage = (Stage)((Node)e.getSource()).getScene().getWindow();
+		stage.setScene(scene);
+		stage.setMaximized(true);
+		stage.show();
+	}
+	public void goToEngagementPage(ActionEvent e) throws IOException{
+		String pathOfNewFile = "/pages/engagement.fxml";
+		root = FXMLLoader.load(getClass().getResource(pathOfNewFile));
+		scene = new Scene(root);
+		stage = (Stage)((Node)e.getSource()).getScene().getWindow();
+		stage.setScene(scene);
+		stage.setMaximized(true);
+		stage.show();
+	}
+	public void goToResourcesPage(ActionEvent e) throws IOException{
+		String pathOfNewFile = "/pages/resources.fxml";
+		root = FXMLLoader.load(getClass().getResource(pathOfNewFile));
+		scene = new Scene(root);
+		stage = (Stage)((Node)e.getSource()).getScene().getWindow();
+		stage.setScene(scene);
+		stage.setMaximized(true);
+		stage.show();
+	}
+	public void goToInternshipsPage(ActionEvent e) throws IOException{
+		String pathOfNewFile = "/pages/internships.fxml";
+		root = FXMLLoader.load(getClass().getResource(pathOfNewFile));
+		scene = new Scene(root);
+		stage = (Stage)((Node)e.getSource()).getScene().getWindow();
+		stage.setScene(scene);
+		stage.setMaximized(true);
+		stage.show();
+	}
+	public void goToClubsPage(ActionEvent e) throws IOException{
+		String pathOfNewFile = "/pages/clubs.fxml";
+		root = FXMLLoader.load(getClass().getResource(pathOfNewFile));
+		scene = new Scene(root);
+		stage = (Stage)((Node)e.getSource()).getScene().getWindow();
+		stage.setScene(scene);
+		stage.setMaximized(true);
 		stage.show();
 	}
 

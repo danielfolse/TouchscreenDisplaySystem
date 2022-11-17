@@ -1,0 +1,16 @@
+
+.news-container {
+    animation: scroll 25s infinite linear;
+}
+
+
+@keyframes scroll {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(-1083px);
+
+    }
+}
