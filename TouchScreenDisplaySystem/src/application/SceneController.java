@@ -101,6 +101,15 @@ public class SceneController {
 	}
 
 
+	private void addLink(ActionEvent e, String path) throws IOException{
+		root = FXMLLoader.load(getClass().getResource(path));
+		scene = new Scene(root);
+		stage = (Stage)((Node)e.getSource()).getScene().getWindow();
+		stage.setScene(scene);
+		stage.setMaximized(true);
+		stage.show();
+	}
+
 	public void test(ActionEvent e) throws IOException{
 		System.out.println("I work");	
 	}
