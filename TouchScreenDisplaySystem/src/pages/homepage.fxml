@@ -25,27 +25,18 @@
                   <Image url="file:/C:/Users/pymda/Downloads/panopto-u-of-arizona-lecture-capture.png" />
                </image>
             </ImageView>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="487.0" stroke="BLACK" strokeType="INSIDE" style="-fx-opacity: 0.8;" width="400.0" GridPane.hgrow="SOMETIMES" GridPane.vgrow="SOMETIMES">
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="487.0" stroke="BLACK" strokeType="INSIDE" style="-fx-opacity: 0.8;" translateX="100.0" translateY="-200.0" width="400.0" GridPane.hgrow="SOMETIMES" GridPane.vgrow="SOMETIMES">
                <GridPane.margin>
-                  <Insets bottom="400.0" left="100.0" />
+                  <Insets />
                </GridPane.margin>
             </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="184.0" stroke="BLACK" strokeType="INSIDE" width="1922.0" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.valignment="TOP" GridPane.vgrow="SOMETIMES" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="381.0" stroke="BLACK" strokeType="INSIDE" style="-fx-opacity: 0.8;" width="400.0" GridPane.halignment="LEFT" GridPane.hgrow="SOMETIMES" GridPane.valignment="BOTTOM" GridPane.vgrow="SOMETIMES">
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="381.0" stroke="BLACK" strokeType="INSIDE" style="-fx-opacity: 0.8;" translateX="100.0" width="400.0" GridPane.halignment="LEFT" GridPane.hgrow="SOMETIMES" GridPane.valignment="BOTTOM" GridPane.vgrow="SOMETIMES">
                <GridPane.margin>
-                  <Insets left="100.0" />
+                  <Insets />
                </GridPane.margin>
             </Rectangle>
-            <Text fill="#0c234b" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Proxima Nova Regular; -fx-font-weight: bold; -fx-font-size: 50;" text="Software Engineering" translateX="25.0" translateY="75.0" GridPane.halignment="LEFT" GridPane.hgrow="SOMETIMES" GridPane.valignment="TOP" GridPane.vgrow="SOMETIMES"/>
-            <ImageView fitHeight="95.0" fitWidth="342.0" pickOnBounds="true" preserveRatio="true" translateX="25.0" translateY="25.0" GridPane.halignment="LEFT" GridPane.hgrow="SOMETIMES" GridPane.valignment="TOP" GridPane.vgrow="SOMETIMES">
-               <image>
-                  <Image url="file:/C:/Users/pymda/Downloads/UA_CENG_RGB_Primary.png" />
-               </image>
-            </ImageView>
             <Button alignment="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#goToAcademicsPage" style="-fx-font-family: Proxima Nova Rg; -fx-font-size: 30 px; -fx-background-color: rgba(139,0,21,1); -fx-text-fill: white;" text="ACADEMICS" textAlignment="CENTER" translateX="200.0" translateY="-10.0" GridPane.halignment="LEFT" GridPane.hgrow="SOMETIMES" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
             </Button>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="1080.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: rgba(226,233, 235,1);" width="617.0" GridPane.halignment="RIGHT" GridPane.hgrow="SOMETIMES" GridPane.valignment="BOTTOM" GridPane.vgrow="SOMETIMES">
-            </Rectangle>
             <Text fill="#0c234b" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Proxima Nova Regular; -fx-font-weight: bold; -fx-font-size: 25;" text="Start Your Software Journey" translateX="125.0" translateY="-300.0" GridPane.halignment="LEFT" GridPane.hgrow="SOMETIMES" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
             </Text>
             <Button alignment="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#goToAcademicsPage" style="-fx-font-family: Proxima Nova Rg; -fx-font-size: 30 px; -fx-background-color: rgba(139,0,21,1); -fx-text-fill: white;" text="ENGAGEMENT" textAlignment="CENTER" translateX="180.0" translateY="-290.0" GridPane.halignment="LEFT" GridPane.hgrow="SOMETIMES" GridPane.valignment="BOTTOM" GridPane.vgrow="SOMETIMES">
@@ -55,6 +46,28 @@
                   <Insets bottom="25.0" left="125.0" />
                </GridPane.margin>
             </Text>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="184.0" stroke="BLACK" strokeType="INSIDE" width="1920.0" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.valignment="TOP" GridPane.vgrow="SOMETIMES" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="1080.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: rgba(226,233, 235,1);" width="617.0" GridPane.halignment="RIGHT" GridPane.hgrow="SOMETIMES" GridPane.valignment="BOTTOM" GridPane.vgrow="SOMETIMES">
+            </Rectangle>
+            <Text fill="#0c234b" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Proxima Nova Regular; -fx-font-weight: bold; -fx-font-size: 50;" text="Software Engineering" translateX="25.0" translateY="75.0" GridPane.halignment="LEFT" GridPane.hgrow="SOMETIMES" GridPane.valignment="TOP" GridPane.vgrow="SOMETIMES" />
+            <ImageView fitHeight="95.0" fitWidth="342.0" pickOnBounds="true" preserveRatio="true" translateX="25.0" translateY="25.0" GridPane.halignment="LEFT" GridPane.hgrow="SOMETIMES" GridPane.valignment="TOP" GridPane.vgrow="SOMETIMES">
+               <image>
+                  <Image url="file:/C:/Users/pymda/Downloads/UA_CENG_RGB_Primary.png" />
+               </image>
+            </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" translateX="1400.0" translateY="340.0" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+         <image>
+            <Image url="@../../../../Downloads/26096bbd705c11d4105a82165811534c.png" />
+         </image>
+      </ImageView>
+      <Text fill="#0c234b" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Proxima Nova Regular; -fx-font-weight: bold; -fx-font-size: 50;" text="Get Started" translateX="1325.0" translateY="200.0" wrappingWidth="500.0" GridPane.valignment="TOP" />
+      <Text fill="#0c234b" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Proxima Nova Regular; -fx-font-size: 25;" text="Schedule an Advising Appointment" translateX="1325.0" translateY="275.0" GridPane.valignment="TOP" />
+      <Text fill="#0c234b" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Proxima Nova Regular; -fx-font-size: 25;" text="Learn More on our Website" translateX="1325.0" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" translateX="1400.0" translateY="115.0">
+         <image>
+            <Image url="file:/C:/Users/pymda/Downloads/7972c75b795ca3df2421493bee7fa1b7.png" />
+         </image>
+      </ImageView>
          </children>
          <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="1920.0" />
