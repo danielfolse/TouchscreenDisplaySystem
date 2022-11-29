@@ -1,18 +1,37 @@
 package application;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
+import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
-public class SceneController {
+public class SceneController implements Initializable{
 	private Stage stage; 
 	private Scene scene; 
 	private Parent root; 
+	
+	@FXML
+	GridPane academicSideBar; 
+	GridPane engagementSideBar; 
+	
+	@Override
+	public void initialize(URL arg0, ResourceBundle arg1) {
+		  TranslateTransition translate = new TranslateTransition();
+		  translateGrid(translate, academicSideBar); 
+		  // Not sure why but movement doesn't work for engagement page 
+		  translateGrid(translate, engagementSideBar); 
+	}
 	
 	public void goToHomePage(ActionEvent e) throws IOException{
 		String pathOfNewFile = "/pages/homepage.fxml";
@@ -55,6 +74,8 @@ public class SceneController {
 		stage.show();
 	}
 	public void goToAcademicsPage(ActionEvent e) throws IOException{
+		
+		
 		String pathOfNewFile = "/pages/academics.fxml";
 		root = FXMLLoader.load(getClass().getResource(pathOfNewFile));
 		scene = new Scene(root);
@@ -100,8 +121,8 @@ public class SceneController {
 		stage.show();
 	}
 
-
-	private void addLink(ActionEvent e, String path) throws IOException{
+	// TODO: use this to simplify code later
+	private void addPath(ActionEvent e, String path) throws IOException{
 		root = FXMLLoader.load(getClass().getResource(path));
 		scene = new Scene(root);
 		stage = (Stage)((Node)e.getSource()).getScene().getWindow();
@@ -110,7 +131,11 @@ public class SceneController {
 		stage.show();
 	}
 
-	public void test(ActionEvent e) throws IOException{
-		System.out.println("I work");	
+	private void translateGrid(TranslateTransition translate, GridPane gp) {
+		  translate.setNode(gp);
+		  translate.setDuration(Duration.millis(1000));
+		  translate.setCycleCount(1);
+		  translate.setByX(-1000);
+		  translate.play();
 	}
 }
