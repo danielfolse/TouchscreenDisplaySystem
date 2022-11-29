@@ -39,7 +39,7 @@
             </Button>
             <Text fill="#0c234b" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Proxima Nova Regular; -fx-font-weight: bold; -fx-font-size: 25;" text="Start Your Software Journey" translateX="125.0" translateY="-300.0" GridPane.halignment="LEFT" GridPane.hgrow="SOMETIMES" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
             </Text>
-            <Button alignment="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#goToAcademicsPage" style="-fx-font-family: Proxima Nova Rg; -fx-font-size: 30 px; -fx-background-color: rgba(139,0,21,1); -fx-text-fill: white;" text="ENGAGEMENT" textAlignment="CENTER" translateX="180.0" translateY="-290.0" GridPane.halignment="LEFT" GridPane.hgrow="SOMETIMES" GridPane.valignment="BOTTOM" GridPane.vgrow="SOMETIMES">
+            <Button alignment="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#goToEngagementPage" style="-fx-font-family: Proxima Nova Rg; -fx-font-size: 30 px; -fx-background-color: rgba(139,0,21,1); -fx-text-fill: white;" text="ENGAGEMENT" textAlignment="CENTER" translateX="180.0" translateY="-290.0" GridPane.halignment="LEFT" GridPane.hgrow="SOMETIMES" GridPane.valignment="BOTTOM" GridPane.vgrow="SOMETIMES">
             </Button>
             <Text fill="#0c234b" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Proxima Nova Regular; -fx-font-weight: bold; -fx-font-size: 25;" text="Outside the Classroom" GridPane.halignment="LEFT" GridPane.hgrow="SOMETIMES" GridPane.valignment="BOTTOM" GridPane.vgrow="SOMETIMES">
                <GridPane.margin>
