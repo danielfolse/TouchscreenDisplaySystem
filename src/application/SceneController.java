@@ -22,17 +22,17 @@ public class SceneController implements Initializable{
 	private Stage stage; 
 	private Scene scene; 
 	private Parent root;
-
+	//StopWatch watch;
 	@FXML
-	GridPane academicSideBar;
+	GridPane sideBar;
 	@FXML
-	GridPane engagementSideBar;
+	GridPane homeSideBar;
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		TranslateTransition translate = new TranslateTransition();
-		translateGrid(translate, academicSideBar);
-		translateGrid(translate, engagementSideBar);
+		translateGrid(-763, translate, sideBar);
+		translateGrid(763, translate, homeSideBar);
 	}
 	
 	public void goToHomePage(ActionEvent e) throws IOException{
@@ -41,11 +41,11 @@ public class SceneController implements Initializable{
 		addLink(e, pathOfNewFile);
 	}
 	
-	public void goToIdlePage(ActionEvent e, StopWatch watch) throws IOException{
+	public void goToIdlePage(ActionEvent e) throws IOException{
 		String pathOfNewFile = "/pages/idle-page.fxml";
 		addLink(e, pathOfNewFile);
-		watch.stop();
-		WriteStatsToFile(watch);
+		//watch.stop();
+		//WriteStatsToFile(watch);
 	}
 	
 	public void goToUndergradPage(ActionEvent e) throws IOException{
@@ -100,11 +100,12 @@ public class SceneController implements Initializable{
 			e.printStackTrace();
 		}
 	}
-	private void translateGrid(TranslateTransition translate, GridPane gp) {
+	private void translateGrid(int distance, TranslateTransition translate, GridPane gp) {
 		translate.setNode(gp);
 		translate.setDuration(Duration.millis(1000));
 		translate.setCycleCount(1);
-		translate.setByX(-763);
+		translate.setByX(distance);
 		translate.play();
 	}
+	
 }

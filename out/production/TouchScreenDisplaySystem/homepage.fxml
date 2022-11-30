@@ -47,30 +47,45 @@
                </GridPane.margin>
             </Text>
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="184.0" stroke="BLACK" strokeType="INSIDE" width="1920.0" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.valignment="TOP" GridPane.vgrow="SOMETIMES" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0c234b" height="1080.0" stroke="BLACK" strokeType="INSIDE" width="617.0" GridPane.halignment="RIGHT" GridPane.hgrow="SOMETIMES" GridPane.valignment="BOTTOM" GridPane.vgrow="SOMETIMES">
-            </Rectangle>
             <Text fill="#0c234b" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Proxima Nova Regular; -fx-font-weight: bold; -fx-font-size: 50;" text="Software Engineering" translateX="25.0" translateY="75.0" GridPane.halignment="LEFT" GridPane.hgrow="SOMETIMES" GridPane.valignment="TOP" GridPane.vgrow="SOMETIMES" />
             <ImageView fitHeight="95.0" fitWidth="342.0" pickOnBounds="true" preserveRatio="true" translateX="25.0" translateY="25.0" GridPane.halignment="LEFT" GridPane.hgrow="SOMETIMES" GridPane.valignment="TOP" GridPane.vgrow="SOMETIMES">
                <image>
                   <Image url="file:/C:/Users/pymda/Downloads/UA_CENG_RGB_Primary.png" />
                </image>
             </ImageView>
-      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" translateX="1400.0" translateY="340.0" GridPane.halignment="LEFT" GridPane.valignment="TOP">
-         <image>
-            <Image url="file:/C:/Users/pymda/Downloads/26096bbd705c11d4105a82165811534c.png" />
-         </image>
-      </ImageView>
-      <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Proxima Nova Regular; -fx-font-weight: bold; -fx-font-size: 50;" text="Get Started" translateX="1325.0" translateY="200.0" wrappingWidth="500.0" GridPane.valignment="TOP" />
-      <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Proxima Nova Regular; -fx-font-size: 25;" text="Schedule an Advising Appointment" translateX="1325.0" translateY="275.0" GridPane.valignment="TOP" />
-      <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Proxima Nova Regular; -fx-font-size: 25;" text="Learn More on our Website" translateX="1325.0" />
-      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" translateX="1400.0" translateY="115.0">
-         <image>
-            <Image url="file:/C:/Users/pymda/Downloads/7972c75b795ca3df2421493bee7fa1b7.png" />
-         </image>
-      </ImageView>
+      <GridPane fx:id="homeSideBar" translateX="-763.0" GridPane.columnIndex="1">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0c234b" height="1080.0" stroke="BLACK" strokeType="INSIDE" width="1244.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0c234b" height="1080.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="617.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" GridPane.vgrow="SOMETIMES">
+            </Rectangle>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Proxima Nova Regular; -fx-font-size: 25;" text="Learn More on our Website" translateX="-50.0" translateY="-50.0" GridPane.columnIndex="1" GridPane.valignment="BOTTOM" />
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Proxima Nova Regular; -fx-font-size: 25;" text="Schedule an Advising Appointment" translateX="-50.0" translateY="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="TOP" />
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" translateX="-50.0" translateY="125.0" GridPane.columnIndex="1" GridPane.valignment="BOTTOM">
+               <image>
+                  <Image url="file:/C:/Users/pymda/Downloads/7972c75b795ca3df2421493bee7fa1b7.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" translateX="-50.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+               <image>
+                  <Image url="file:/C:/Users/pymda/Downloads/26096bbd705c11d4105a82165811534c.png" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Proxima Nova Regular; -fx-font-weight: bold; -fx-font-size: 50;" text="Get Started" translateX="-50.0" wrappingWidth="500.0" GridPane.columnIndex="1" GridPane.valignment="CENTER" />
+         </children>
+      </GridPane>
          </children>
          <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="1920.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="1920.0" />
          </columnConstraints>
          <rowConstraints>
             <RowConstraints minHeight="10.0" prefHeight="1080.0" vgrow="SOMETIMES" />
