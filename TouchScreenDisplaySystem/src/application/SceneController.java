@@ -22,7 +22,7 @@ public class SceneController implements Initializable{
 	private Stage stage; 
 	private Scene scene; 
 	private Parent root;
-	//StopWatch watch;
+	StopWatch watch;
 	@FXML
 	GridPane sideBar;
 	@FXML
