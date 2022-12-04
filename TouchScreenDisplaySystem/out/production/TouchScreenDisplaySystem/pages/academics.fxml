@@ -7,6 +7,7 @@
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Text?>
 
@@ -42,27 +43,93 @@
                 <Image url="file:/C:/Users/pymda/Downloads/UA_CENG_RGB_Primary.png" />
             </image>
         </ImageView>
+        <GridPane fx:id="sideBar" alignment="CENTER_RIGHT" prefHeight="1080.0" prefWidth="1417.0" translateX="763.0" GridPane.columnIndex="1">
+            <columnConstraints>
+                <ColumnConstraints />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0c234b" height="1080.0" stroke="BLACK" strokeType="INSIDE" width="1380.0" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" GridPane.vgrow="SOMETIMES">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin></Rectangle>
+                <VBox alignment="TOP_RIGHT" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" />
+                <VBox alignment="CENTER_RIGHT" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                    <children>
+                        <Button onAction="#goToHomePage" style="-fx-background-color: #0c234b;" translateX="-50.0" translateY="100.0">
+                            <graphic>
+                                <ImageView fitHeight="62.0" fitWidth="70.0">
+                                    <Image url="@images/homeButton.png" />
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Button layoutX="404.0" layoutY="155.0" onAction="#goToHomePage" style="-fx-background-color: #0c234b;" translateX="-150.0" translateY="30.0">
+                            <graphic>
+                                <ImageView fitHeight="62.0" fitWidth="70.0">
+                                    <image>
+                                        <Image url="@images/Back-Button-PNG-Photo.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                    </children>
+                </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" />
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Proxima Nova Regular; -fx-font-weight: bold; -fx-font-size: 30;" text="Covering the Entire Software Development Lifecycle" translateX="-300.0" />
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Proxima Nova Regular; -fx-font-size: 20;" text="Bolstered by intensive design experiences that reflect industry demand and focused on large-scale product and system development to meet societal needs, the University of Arizona BS in software engineering goes far beyond programming fundamentals and theoretical applications. The degree program – jointly administered by the departments of Electrical &amp; Computer Engineering and Systems &amp; Industrial Engineering – is offered on the main campus in Tucson, Arizona Online, and Yuma Campus. Courses cover the entire software development lifecycle. Students choose electives – such as web and mobile applications, or embedded systems – from across many of the college’s eight departments.Importantly, students learn about software DevOps, Agile methodology, and continuous integration and deployment. They use open-source integrated development environments, operating systems and cloud-based infrastructures to gain the specialized software skills in highest demand by top employers." translateX="-300.0" wrappingWidth="1000.0" />
+               </children></VBox>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Proxima Nova Regular; -fx-font-weight: bold; -fx-font-size: 50;" text="Academics" translateX="-300.0" GridPane.columnIndex="1" />
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <ImageView fitHeight="293.0" fitWidth="387.0" pickOnBounds="true" preserveRatio="true" translateX="-400.0" translateY="-75.0">
+                     <image>
+                        <Image url="@images/building.jpg" />
+                     </image>
+                  </ImageView>
+                  <Button alignment="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#goToUndergradPage" style="-fx-font-family: Proxima Nova Rg; -fx-font-size: 25 px; -fx-background-color: rgba(139,0,21,1); -fx-text-fill: white;" text="Undergraduate Programs" textAlignment="CENTER" translateX="-400.0" translateY="-175.0" />
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <children>
+                  <ImageView fitHeight="293.0" fitWidth="387.0" pickOnBounds="true" preserveRatio="true" translateX="-450.0" translateY="90.0">
+                     <image>
+                        <Image url="@images/building.jpg" />
+                     </image>
+                  </ImageView>
+                  <Button alignment="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#goToGraduatePage" style="-fx-font-family: Proxima Nova Rg; -fx-font-size: 25 px; -fx-background-color: rgba(139,0,21,1); -fx-text-fill: white;" text="Graduate Programs" textAlignment="CENTER" translateX="-450.0" translateY="-15.0" />
+                  <ImageView fitHeight="293.0" fitWidth="387.0" layoutX="57.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" translateX="-25.0" translateY="-250.0">
+                     <image>
+                        <Image url="@images/building.jpg" />
+                     </image>
+                  </ImageView>
+                  <Button alignment="CENTER" defaultButton="true" layoutX="126.0" layoutY="300.0" mnemonicParsing="false" onAction="#goToResourcesPage" style="-fx-font-family: Proxima Nova Rg; -fx-font-size: 25 px; -fx-background-color: rgba(139,0,21,1); -fx-text-fill: white;" text="Academic Resources" textAlignment="CENTER" translateX="-25.0" translateY="-360.0" />
+               </children>
+            </VBox>
+            </children>
+        </GridPane>
         <Button alignment="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#goToAcademicsPage" style="-fx-font-family: Proxima Nova Rg; -fx-font-size: 30 px; -fx-background-color: rgba(139,0,21,1); -fx-text-fill: white;" text="ACADEMICS" textAlignment="CENTER" translateX="200.0" translateY="-10.0" GridPane.halignment="LEFT" GridPane.hgrow="SOMETIMES" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
         </Button>
         <Text fill="#0c234b" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Proxima Nova Regular; -fx-font-weight: bold; -fx-font-size: 25;" text="Start Your Software Journey" translateX="125.0" translateY="-300.0" GridPane.halignment="LEFT" GridPane.hgrow="SOMETIMES" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
         </Text>
-        <Button alignment="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#goToAcademicsPage" style="-fx-font-family: Proxima Nova Rg; -fx-font-size: 30 px; -fx-background-color: rgba(139,0,21,1); -fx-text-fill: white;" text="ENGAGEMENT" textAlignment="CENTER" translateX="180.0" translateY="-290.0" GridPane.halignment="LEFT" GridPane.hgrow="SOMETIMES" GridPane.valignment="BOTTOM" GridPane.vgrow="SOMETIMES">
+        <Button alignment="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#goToEngagementPage" style="-fx-font-family: Proxima Nova Rg; -fx-font-size: 30 px; -fx-background-color: rgba(139,0,21,1); -fx-text-fill: white;" text="ENGAGEMENT" textAlignment="CENTER" translateX="180.0" translateY="-290.0" GridPane.halignment="LEFT" GridPane.hgrow="SOMETIMES" GridPane.valignment="BOTTOM" GridPane.vgrow="SOMETIMES">
         </Button>
         <Text fill="#0c234b" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Proxima Nova Regular; -fx-font-weight: bold; -fx-font-size: 25;" text="Outside the Classroom" GridPane.halignment="LEFT" GridPane.hgrow="SOMETIMES" GridPane.valignment="BOTTOM" GridPane.vgrow="SOMETIMES">
             <GridPane.margin>
                 <Insets bottom="25.0" left="125.0" />
             </GridPane.margin>
         </Text>
-        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="RIGHT">
-            <image>
-                <Image url="@../../../../Downloads/frame%20(1).png" />
-            </image>
-        </ImageView>
-        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="1080.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: rgba(226,233, 235,1);" width="1422.0" GridPane.halignment="RIGHT" GridPane.hgrow="SOMETIMES" GridPane.valignment="BOTTOM" GridPane.vgrow="SOMETIMES">
-        </Rectangle>
     </children>
     <columnConstraints>
         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="1920.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="1920.0" />
     </columnConstraints>
     <rowConstraints>
         <RowConstraints minHeight="10.0" prefHeight="1080.0" vgrow="SOMETIMES" />
