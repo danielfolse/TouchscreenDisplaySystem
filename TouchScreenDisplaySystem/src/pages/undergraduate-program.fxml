@@ -74,22 +74,6 @@
                         <Image url="@images/minorDeclare.png" />
                      </image>
                   </ImageView>
-                  <Button onAction="#goToHomePage" style="-fx-background-color: #0c234b;" translateX="-50.0" translateY="50.0">
-                     <graphic>
-                        <ImageView fitHeight="62.0" fitWidth="70.0">
-                           <Image url="@images/homeButton.png" />
-                        </ImageView>
-                     </graphic>
-                  </Button>
-                  <Button layoutX="404.0" layoutY="155.0" onAction="#goToHomePage" style="-fx-background-color: #0c234b;" translateX="-150.0" translateY="-15.0">
-                     <graphic>
-                        <ImageView fitHeight="62.0" fitWidth="70.0">
-                           <image>
-                              <Image url="@images/Back-Button-PNG-Photo.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
                </children>
             </VBox>
             <VBox layoutX="490.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
@@ -117,6 +101,22 @@
             </VBox>
             <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Proxima Nova Regular; -fx-font-weight: bold; -fx-font-size: 30;" text="Major" translateX="-400.0" translateY="-100.0" />
             <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Proxima Nova Regular; -fx-font-size: 20;" text="Sample Semester" translateX="-400.0" translateY="170.0" wrappingWidth="1000.0" />
+            <Button onAction="#goToHomePage" style="-fx-background-color: #0c234b;" translateX="840.0" translateY="830.0">
+               <graphic>
+                  <ImageView fitHeight="62.0" fitWidth="70.0">
+                     <Image url="@images/homeButton.png" />
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button onAction="#goToAcademicsPage" style="-fx-background-color: #0c234b;" translateX="750.0" translateY="830.0">
+               <graphic>
+                  <ImageView fitHeight="62.0" fitWidth="70.0">
+                     <image>
+                        <Image url="@images/Back-Button-PNG-Photo.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
          </children>
       </GridPane>
       <Button alignment="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#goToAcademicsPage" style="-fx-font-family: Proxima Nova Rg; -fx-font-size: 30 px; -fx-background-color: rgba(139,0,21,1); -fx-text-fill: white;" text="ACADEMICS" textAlignment="CENTER" translateX="200.0" translateY="-10.0" GridPane.halignment="LEFT" GridPane.hgrow="SOMETIMES" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">

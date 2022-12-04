@@ -13,6 +13,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.GridPane;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import org.apache.commons.lang.time.StopWatch;
@@ -27,12 +28,15 @@ public class SceneController implements Initializable{
 	GridPane sideBar;
 	@FXML
 	GridPane homeSideBar;
+	@FXML
+	Text newsTicker;
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		TranslateTransition translate = new TranslateTransition();
 		translateGrid(-763, translate, sideBar);
 		translateGrid(763, translate, homeSideBar);
+		translateText(1920, translate, newsTicker);
 	}
 	
 	public void goToHomePage(ActionEvent e) throws IOException{
@@ -80,11 +84,9 @@ public class SceneController implements Initializable{
 
 	private void addLink(ActionEvent e, String path) throws IOException{
 		root = FXMLLoader.load(getClass().getResource(path));
-		scene = new Scene(root);
 		stage = (Stage)((Node)e.getSource()).getScene().getWindow();
-		stage.setScene(scene);
-		//stage.setFullScreen(true);
-		stage.show();
+		stage.getScene().setRoot(root);
+
 	}
 
 	public void test(ActionEvent e) throws IOException {
@@ -106,6 +108,17 @@ public class SceneController implements Initializable{
 		translate.setCycleCount(1);
 		translate.setByX(distance);
 		translate.play();
+	}
+
+	private void translateText(int distance, TranslateTransition translate, Text newsTicker) {
+		translate.setNode(newsTicker);
+		translate.setDuration(Duration.millis(2000));
+		translate.setCycleCount(1);
+		translate.setByX(distance);
+		for(int i = 0; i < 100; i++) {
+			translate.play();
+		}
+
 	}
 
 }

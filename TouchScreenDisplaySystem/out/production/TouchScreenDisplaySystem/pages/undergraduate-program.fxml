@@ -18,12 +18,12 @@
       <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20; -fx-font-family: Proxima Nova Rg;" text="&quot;At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similiq" translateY="100.0" />
       <ImageView fitHeight="451.0" fitWidth="1309.0" pickOnBounds="true" preserveRatio="true" translateY="-180.0" GridPane.halignment="LEFT" GridPane.hgrow="SOMETIMES" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
          <image>
-            <Image url="file:/C:/Users/pymda/Downloads/facultystaff_header_0.png" />
+            <Image url="@images/facultystaff_header_0.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="379.0" fitWidth="1384.0" pickOnBounds="true" preserveRatio="true" GridPane.hgrow="SOMETIMES" GridPane.valignment="BOTTOM" GridPane.vgrow="SOMETIMES">
          <image>
-            <Image url="file:/C:/Users/pymda/Downloads/panopto-u-of-arizona-lecture-capture.png" />
+            <Image url="@images/panopto-u-of-arizona-lecture-capture.png" />
          </image>
       </ImageView>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="487.0" stroke="BLACK" strokeType="INSIDE" style="-fx-opacity: 0.8;" translateX="100.0" translateY="-200.0" width="400.0" GridPane.hgrow="SOMETIMES" GridPane.vgrow="SOMETIMES">
@@ -40,7 +40,7 @@
       <Text fill="#0c234b" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Proxima Nova Regular; -fx-font-weight: bold; -fx-font-size: 50;" text="Software Engineering" translateX="25.0" translateY="75.0" GridPane.halignment="LEFT" GridPane.hgrow="SOMETIMES" GridPane.valignment="TOP" GridPane.vgrow="SOMETIMES" />
       <ImageView fitHeight="95.0" fitWidth="342.0" pickOnBounds="true" preserveRatio="true" translateX="25.0" translateY="25.0" GridPane.halignment="LEFT" GridPane.hgrow="SOMETIMES" GridPane.valignment="TOP" GridPane.vgrow="SOMETIMES">
          <image>
-            <Image url="file:/C:/Users/pymda/Downloads/UA_CENG_RGB_Primary.png" />
+            <Image url="@images/UA_CENG_RGB_Primary.png" />
          </image>
       </ImageView>
       <GridPane fx:id="sideBar" alignment="CENTER_RIGHT" prefHeight="1080.0" prefWidth="1417.0" translateX="763.0" GridPane.columnIndex="1">
@@ -74,22 +74,6 @@
                         <Image url="@images/minorDeclare.png" />
                      </image>
                   </ImageView>
-                  <Button onAction="#goToHomePage" style="-fx-background-color: #0c234b;" translateX="-50.0" translateY="50.0">
-                     <graphic>
-                        <ImageView fitHeight="62.0" fitWidth="70.0">
-                           <Image url="@images/homeButton.png" />
-                        </ImageView>
-                     </graphic>
-                  </Button>
-                  <Button layoutX="404.0" layoutY="155.0" onAction="#goToHomePage" style="-fx-background-color: #0c234b;" translateX="-150.0" translateY="-15.0">
-                     <graphic>
-                        <ImageView fitHeight="62.0" fitWidth="70.0">
-                           <image>
-                              <Image url="@images/Back-Button-PNG-Photo.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
                </children>
             </VBox>
             <VBox layoutX="490.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
@@ -117,6 +101,22 @@
             </VBox>
             <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Proxima Nova Regular; -fx-font-weight: bold; -fx-font-size: 30;" text="Major" translateX="-400.0" translateY="-100.0" />
             <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Proxima Nova Regular; -fx-font-size: 20;" text="Sample Semester" translateX="-400.0" translateY="170.0" wrappingWidth="1000.0" />
+            <Button onAction="#goToHomePage" style="-fx-background-color: #0c234b;" translateX="840.0" translateY="830.0">
+               <graphic>
+                  <ImageView fitHeight="62.0" fitWidth="70.0">
+                     <Image url="@images/homeButton.png" />
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button onAction="#goToAcademicsPage" style="-fx-background-color: #0c234b;" translateX="750.0" translateY="830.0">
+               <graphic>
+                  <ImageView fitHeight="62.0" fitWidth="70.0">
+                     <image>
+                        <Image url="@images/Back-Button-PNG-Photo.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
          </children>
       </GridPane>
       <Button alignment="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#goToAcademicsPage" style="-fx-font-family: Proxima Nova Rg; -fx-font-size: 30 px; -fx-background-color: rgba(139,0,21,1); -fx-text-fill: white;" text="ACADEMICS" textAlignment="CENTER" translateX="200.0" translateY="-10.0" GridPane.halignment="LEFT" GridPane.hgrow="SOMETIMES" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
