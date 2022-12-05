@@ -15,7 +15,11 @@
     <children>
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0c234b" height="200.0" stroke="BLACK" strokeType="INSIDE" translateY="100.0" width="1305.0" GridPane.hgrow="SOMETIMES" GridPane.vgrow="SOMETIMES">
         </Rectangle>
-        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20; -fx-font-family: Proxima Nova Rg;" text="&quot;At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similiq" translateY="100.0" />
+        <VBox prefHeight="200.0" prefWidth="100.0" translateX="1200.0">
+            <children>
+                <Text fx:id="newsTicker" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20; -fx-font-family: Proxima Nova Rg;" translateY="625.0" />
+            </children>
+        </VBox>
         <ImageView fitHeight="451.0" fitWidth="1309.0" pickOnBounds="true" preserveRatio="true" translateY="-180.0" GridPane.halignment="LEFT" GridPane.hgrow="SOMETIMES" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
             <image>
                 <Image url="@images/facultystaff_header_0.png" />
@@ -166,6 +170,7 @@
                 <Insets bottom="25.0" left="125.0" />
             </GridPane.margin>
         </Text>
+        <Button fx:id="invisIdlePageBtn" mnemonicParsing="false" onAction="#goToHomePage" style="-fx-font-family: Proxima Nova Rg; -fx-font-size: 30px; -fx-background-color: rgba(139,0,21,1); -fx-text-fill: white;" text="Button" />
     </children>
     <columnConstraints>
         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="1920.0" />
