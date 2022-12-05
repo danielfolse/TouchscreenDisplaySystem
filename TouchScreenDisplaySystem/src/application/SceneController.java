@@ -5,9 +5,9 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import javafx.animation.PauseTransition;
-import javafx.animation.SequentialTransition;
 import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -19,10 +19,9 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-import java.io.FileWriter;
 
 public class SceneController implements Initializable {
-	private final int IDLE_TIME_SEC = 5; //eventually change to 900 for 15 min
+	private final int IDLE_TIME_SEC = 900; //eventually change to 900 for 15 min
 	private Stage stage;
 	private Scene scene;
 	private Parent root;
@@ -38,7 +37,6 @@ public class SceneController implements Initializable {
 	@FXML
 	Button invisIdlePageBtn;
 
-	public ActionEvent simulated;
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		TranslateTransition translate = new TranslateTransition();
@@ -51,7 +49,6 @@ public class SceneController implements Initializable {
 				"Bowling Tonight! Do you like to bowl? Our friends at Biosystems Engineering (Biosystems Engineering Club) are having a bowling fundraiser",
 				"Need a Winter Gen-ed? Check out: LING 150A1: Language in the World AIS/LINC 210: American Indian Languages"};
 		translateText(translateNews, newsTicker, newsItems);
-
 		if (invisIdlePageBtn != null) {
 			pause = new PauseTransition(Duration.seconds(IDLE_TIME_SEC));
 			invisIdlePageBtn.setOpacity(0);
@@ -62,7 +59,6 @@ public class SceneController implements Initializable {
 	}
 
 	public void goToHomePage(ActionEvent e) throws IOException {
-		//watch.start();
 		pathOfNewFile = "/pages/homepage.fxml";
 		addLink(e, pathOfNewFile);
 	}
@@ -70,43 +66,54 @@ public class SceneController implements Initializable {
 	public void goToIdlePage(ActionEvent e) throws IOException {
 		pathOfNewFile = "/pages/idle-page.fxml";
 		addLink(e, pathOfNewFile);
-		//watch.stop();
-		//WriteStatsToFile(watch);
 	}
 
-	public void goToUndergradPage(ActionEvent e) throws IOException {
+	@FXML
+	public void goToUndergradPage(ActionEvent e) throws IOException, InterruptedException {
 		pathOfNewFile = "/pages/undergraduate-program.fxml";
-		addLink(e, pathOfNewFile);
+		transitionBetween(e, pathOfNewFile);
 	}
 
 	public void goToGraduatePage(ActionEvent e) throws IOException {
 		pathOfNewFile = "/pages/graduate-program.fxml";
-		addLink(e, pathOfNewFile);
+		transitionBetween(e, pathOfNewFile);
 	}
 
 	public void goToAcademicsPage(ActionEvent e) throws IOException {
-		pathOfNewFile = "/pages/academics.fxml";
-		addLink(e, pathOfNewFile);
+		if(homeSideBar == null) {
+			pathOfNewFile = "/pages/academics.fxml";
+			transitionBetween(e, pathOfNewFile);
+		}
+		else {
+			pathOfNewFile = "/pages/academics.fxml";
+			addLink(e, pathOfNewFile);
+		}
 	}
 
 	public void goToEngagementPage(ActionEvent e) throws IOException {
-		pathOfNewFile = "/pages/engagement.fxml";
-		addLink(e, pathOfNewFile);
+		if(homeSideBar == null) {
+			pathOfNewFile = "/pages/engagement.fxml";
+			transitionBetween(e, pathOfNewFile);
+		}
+		else {
+			pathOfNewFile = "/pages/engagement.fxml";
+			addLink(e, pathOfNewFile);
+		}
 	}
 
 	public void goToResourcesPage(ActionEvent e) throws IOException {
 		pathOfNewFile = "/pages/resources.fxml";
-		addLink(e, pathOfNewFile);
+		transitionBetween(e, pathOfNewFile);
 	}
 
 	public void goToInternshipsPage(ActionEvent e) throws IOException {
 		pathOfNewFile = "/pages/internships.fxml";
-		addLink(e, pathOfNewFile);
+		transitionBetween(e, pathOfNewFile);
 	}
 
 	public void goToClubsPage(ActionEvent e) throws IOException {
 		pathOfNewFile = "/pages/clubs.fxml";
-		addLink(e, pathOfNewFile);
+		transitionBetween(e, pathOfNewFile);
 	}
 
 
@@ -114,11 +121,26 @@ public class SceneController implements Initializable {
 		root = FXMLLoader.load(getClass().getResource(path));
 		stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
 		stage.getScene().setRoot(root);
-
 	}
 
 	public void test(ActionEvent e) throws IOException {
 		System.out.println("I work");
+	}
+
+	public void transitionBetween (ActionEvent e, String pathOfNewFile){
+		TranslateTransition translate = new TranslateTransition();
+		translateGrid(763, translate, sideBar);
+		translate.setOnFinished(new EventHandler<ActionEvent>() {
+
+			@Override
+			public void handle(ActionEvent event) {
+				try {
+					addLink(e, pathOfNewFile);
+				} catch (IOException ex) {
+					throw new RuntimeException(ex);
+				}
+			}
+		});
 	}
 
 	//	public void WriteStatsToFile(StopWatch watch){
@@ -158,7 +180,7 @@ public class SceneController implements Initializable {
 		int time = 0;
 		for (int i = 0; i < newsItems.length; i++) {
 			newsTicker.setText(newsTicker.getText() + "                                                  " + newsItems[i]);
-			distance = distance - 10 * (newsItems[i].length() + 40);
+			distance = distance - 10 * (newsItems[i].length() + 50);
 			time = time + 100 * newsItems[i].length();
 		}
 		translate.setNode(newsTicker);

@@ -76,16 +76,16 @@
             <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Proxima Nova Regular; -fx-font-size: 25;" text="Schedule an Advising Appointment" translateX="-50.0" translateY="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="TOP" />
             <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" translateX="-50.0" translateY="125.0" GridPane.columnIndex="1" GridPane.valignment="BOTTOM">
                <image>
-                  <Image url="@images/7972c75b795ca3df2421493bee7fa1b7.png" />
+                  <Image url="@images/website.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" translateX="-50.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
                <image>
-                  <Image url="@images/26096bbd705c11d4105a82165811534c.png" />
+                  <Image url="@images/advisingAppointment.png" />
                </image>
             </ImageView>
             <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Proxima Nova Regular; -fx-font-weight: bold; -fx-font-size: 50;" text="Get Started" translateX="-50.0" wrappingWidth="500.0" GridPane.columnIndex="1" GridPane.valignment="CENTER" />
-             <Button fx:id="invisIdlePageBtn" mnemonicParsing="false" onAction="#goToHomePage" style="-fx-font-family: Proxima Nova Rg; -fx-font-size: 30px; -fx-background-color: rgba(139,0,21,1); -fx-text-fill: white;" text="Button" />
+             <Button fx:id="invisIdlePageBtn" mnemonicParsing="false" onAction="#goToIdlePage" style="-fx-font-family: Proxima Nova Rg; -fx-font-size: 30px; -fx-background-color: rgba(139,0,21,1); -fx-text-fill: white;" text="Button" />
          </children>
       </GridPane>
          </children>
