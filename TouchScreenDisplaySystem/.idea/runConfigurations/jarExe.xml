@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="jarExe" type="JarApplication">
+    <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/TouchScreenDisplaySystem_jar/TouchScreenDisplaySystem.jar" />
+    <option name="VM_PARAMETERS" value="--module-path ${PATH_TO_FX} --add-modules javafx.fxml,javafx.controls,javafx.graphics" />
+    <option name="WORKING_DIRECTORY" value="C:\Users\pymda\Desktop\TouchScreenDisplaySystem" />
+    <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+    <option name="ALTERNATIVE_JRE_PATH" value="19" />
+    <method v="2" />
+  </configuration>
+</component>

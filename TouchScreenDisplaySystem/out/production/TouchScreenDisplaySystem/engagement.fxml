@@ -121,7 +121,7 @@
                 <Insets bottom="25.0" left="125.0" />
             </GridPane.margin>
         </Text>
-        <Button fx:id="invisIdlePageBtn" mnemonicParsing="false" onAction="#goToHomePage" style="-fx-font-family: Proxima Nova Rg; -fx-font-size: 30px; -fx-background-color: rgba(139,0,21,1); -fx-text-fill: white;" text="Button" />
+        <Button fx:id="invisIdlePageBtn" mnemonicParsing="false" onAction="#goToIdlePage" style="-fx-font-family: Proxima Nova Rg; -fx-font-size: 30px; -fx-background-color: rgba(139,0,21,1); -fx-text-fill: white;" text="Button" />
     </children>
     <columnConstraints>
         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="1920.0" />

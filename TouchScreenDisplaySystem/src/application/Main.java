@@ -15,7 +15,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.scene.layout.BorderPane;
-import org.apache.commons.lang.time.StopWatch;
+
 
 
 public class Main extends Application {
@@ -25,7 +25,6 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			StopWatch watch = new StopWatch();
 			String rootPath = "/pages/idle-page.fxml";
 			Parent root = FXMLLoader.load(getClass().getResource(rootPath));
 			Scene scene = new Scene(root);

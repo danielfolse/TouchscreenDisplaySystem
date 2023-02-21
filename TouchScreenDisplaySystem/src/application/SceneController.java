@@ -3,6 +3,10 @@ package application;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.List;
+import java.util.ArrayList;
+import java.io.BufferedReader;
+import java.io.FileReader;
 
 import javafx.animation.PauseTransition;
 import javafx.animation.TranslateTransition;
@@ -20,13 +24,16 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
-public class SceneController implements Initializable {
+public class SceneController implements Initializable{
 	private final int IDLE_TIME_SEC = 900; //eventually change to 900 for 15 min
 	private Stage stage;
 	private Scene scene;
 	private Parent root;
 	private String pathOfNewFile;
 	private PauseTransition pause;
+
+	public long interactionCounter;
+	public long clickCounter = 0;
 
 	@FXML
 	GridPane sideBar;
@@ -36,6 +43,8 @@ public class SceneController implements Initializable {
 	Text newsTicker;
 	@FXML
 	Button invisIdlePageBtn;
+ 	@FXML
+
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
@@ -43,11 +52,12 @@ public class SceneController implements Initializable {
 		TranslateTransition translateNews = new TranslateTransition();
 		translateGrid(-763, translate, sideBar);
 		translateGrid(763, translate, homeSideBar);
-		String[] newsItems = {
-				"Software students, the last day of regular classes is also the last day to withdraw from classes!",
-				"Interested in getting your SFWE 491 (prevously SFWE 404) out of the way? We have plenty of opportunities for you to earn that 1-unit in Spring!",
-				"Bowling Tonight! Do you like to bowl? Our friends at Biosystems Engineering (Biosystems Engineering Club) are having a bowling fundraiser",
-				"Need a Winter Gen-ed? Check out: LING 150A1: Language in the World AIS/LINC 210: American Indian Languages"};
+		String[] newsItems = new String[0];
+		try {
+			newsItems = readTextFromFile();
+		} catch (IOException e) {
+			throw new RuntimeException(e);
+		}
 		translateText(translateNews, newsTicker, newsItems);
 		if (invisIdlePageBtn != null) {
 			pause = new PauseTransition(Duration.seconds(IDLE_TIME_SEC));
@@ -59,6 +69,9 @@ public class SceneController implements Initializable {
 	}
 
 	public void goToHomePage(ActionEvent e) throws IOException {
+		if(homeSideBar == null && sideBar == null){
+			long initialTime = System.currentTimeMillis();
+		}
 		pathOfNewFile = "/pages/homepage.fxml";
 		addLink(e, pathOfNewFile);
 	}
@@ -69,7 +82,7 @@ public class SceneController implements Initializable {
 	}
 
 	@FXML
-	public void goToUndergradPage(ActionEvent e) throws IOException, InterruptedException {
+	public void goToUndergradPage(ActionEvent e) throws IOException {
 		pathOfNewFile = "/pages/undergraduate-program.fxml";
 		transitionBetween(e, pathOfNewFile);
 	}
@@ -142,17 +155,6 @@ public class SceneController implements Initializable {
 			}
 		});
 	}
-
-	//	public void WriteStatsToFile(StopWatch watch){
-//		try {
-//			FileWriter myWriter = new FileWriter("TimeStats.txt");
-//			myWriter.write("Total Time not on Idle: " + watch.getTime());
-//			myWriter.close();
-//		}
-//		catch(IOException e){
-//			e.printStackTrace();
-//		}
-//	}
 	private void translateGrid(int distance, TranslateTransition translate, GridPane gp) {
 		translate.setNode(gp);
 		translate.setDuration(Duration.millis(1000));
@@ -189,6 +191,21 @@ public class SceneController implements Initializable {
 		translate.setByX(distance);
 		translate.play();
 
+	}
+	private String[] readTextFromFile() throws IOException {
+		List<String> arr = new ArrayList();
+		BufferedReader bfrdr = new BufferedReader(new FileReader("C:\\TouchScreenDisplaySystem\\announcements.txt"));
+
+		String newsItem = bfrdr.readLine();
+
+		while(newsItem != null){
+			arr.add(newsItem);
+			newsItem = bfrdr.readLine();
+		}
+		bfrdr.close();
+
+		String[] announcementArray = arr.toArray(new String[0]);
+		return announcementArray;
 	}
 }
 

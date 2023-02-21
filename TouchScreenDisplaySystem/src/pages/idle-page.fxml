@@ -15,9 +15,10 @@
    <children>
       <GridPane alignment="CENTER" prefHeight="540.0" prefWidth="960.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
+            <Text fx:id="newsTicker" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
             <ImageView fitHeight="1082.0" fitWidth="1919.0" pickOnBounds="true" preserveRatio="false" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <image>
-                  <Image url="file:/C:/Users/pymda/Pictures/Arizona-Campus-Fireworks_Sunset.png" />
+                  <Image url="@images/Arizona-Campus-Fireworks_Sunset.png" />
                </image>
             </ImageView>
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="307.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: rgba(12,35,75, 0.7);" width="698.0" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">

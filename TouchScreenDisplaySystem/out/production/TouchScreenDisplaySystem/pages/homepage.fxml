@@ -40,7 +40,7 @@
                   <Insets />
                </GridPane.margin>
             </Rectangle>
-            <Button alignment="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#goToAcademicsPage" style="-fx-font-family: Proxima Nova Rg; -fx-font-size: 30 px; -fx-background-color: rgba(139,0,21,1); -fx-text-fill: white;" text="ACADEMICS" textAlignment="CENTER" translateX="200.0" translateY="-10.0" GridPane.halignment="LEFT" GridPane.hgrow="SOMETIMES" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+            <Button fx:id="academicsButton" alignment="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#goToAcademicsPage" style="-fx-font-family: Proxima Nova Rg; -fx-font-size: 30 px; -fx-background-color: rgba(139,0,21,1); -fx-text-fill: white;" text="ACADEMICS" textAlignment="CENTER" translateX="200.0" translateY="-10.0" GridPane.halignment="LEFT" GridPane.hgrow="SOMETIMES" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
             </Button>
             <Text fill="#0c234b" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Proxima Nova Regular; -fx-font-weight: bold; -fx-font-size: 25;" text="Start Your Software Journey" translateX="125.0" translateY="-300.0" GridPane.halignment="LEFT" GridPane.hgrow="SOMETIMES" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
             </Text>
@@ -53,6 +53,7 @@
             </Text>
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="184.0" stroke="BLACK" strokeType="INSIDE" width="1920.0" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.valignment="TOP" GridPane.vgrow="SOMETIMES" />
             <Text fill="#0c234b" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Proxima Nova Regular; -fx-font-weight: bold; -fx-font-size: 50;" text="Software Engineering" translateX="25.0" translateY="75.0" GridPane.halignment="LEFT" GridPane.hgrow="SOMETIMES" GridPane.valignment="TOP" GridPane.vgrow="SOMETIMES" />
+             <Button fx:id="invisIdlePageBtn" mnemonicParsing="false" onAction="#goToIdlePage" style="-fx-font-family: Proxima Nova Rg; -fx-font-size: 30px; -fx-background-color: rgba(139,0,21,1); -fx-text-fill: white;" text="Button" />
             <ImageView fitHeight="95.0" fitWidth="342.0" pickOnBounds="true" preserveRatio="true" translateX="25.0" translateY="25.0" GridPane.halignment="LEFT" GridPane.hgrow="SOMETIMES" GridPane.valignment="TOP" GridPane.vgrow="SOMETIMES">
                <image>
                   <Image url="@images/UA_CENG_RGB_Primary.png" />
@@ -85,7 +86,6 @@
                </image>
             </ImageView>
             <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Proxima Nova Regular; -fx-font-weight: bold; -fx-font-size: 50;" text="Get Started" translateX="-50.0" wrappingWidth="500.0" GridPane.columnIndex="1" GridPane.valignment="CENTER" />
-             <Button fx:id="invisIdlePageBtn" mnemonicParsing="false" onAction="#goToIdlePage" style="-fx-font-family: Proxima Nova Rg; -fx-font-size: 30px; -fx-background-color: rgba(139,0,21,1); -fx-text-fill: white;" text="Button" />
          </children>
       </GridPane>
          </children>

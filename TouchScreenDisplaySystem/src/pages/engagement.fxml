@@ -68,8 +68,8 @@
                 <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" />
                 <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                     <children>
-                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Proxima Nova Regular; -fx-font-weight: bold; -fx-font-size: 30;" text="Covering the Entire Software Development Lifecycle" translateX="-300.0" />
-                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Proxima Nova Regular; -fx-font-size: 20;" text="Bolstered by intensive design experiences that reflect industry demand and focused on large-scale product and system development to meet societal needs, the University of Arizona BS in software engineering goes far beyond programming fundamentals and theoretical applications. The degree program – jointly administered by the departments of Electrical &amp; Computer Engineering and Systems &amp; Industrial Engineering – is offered on the main campus in Tucson, Arizona Online, and Yuma Campus. Courses cover the entire software development lifecycle. Students choose electives – such as web and mobile applications, or embedded systems – from across many of the college’s eight departments.Importantly, students learn about software DevOps, Agile methodology, and continuous integration and deployment. They use open-source integrated development environments, operating systems and cloud-based infrastructures to gain the specialized software skills in highest demand by top employers." translateX="-300.0" wrappingWidth="1000.0" />
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Proxima Nova Regular; -fx-font-weight: bold; -fx-font-size: 30;" text="Outside the Classroom" translateX="-300.0" />
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Proxima Nova Regular; -fx-font-size: 20;" text="Software engineering students do design projects every semester. They get experience participating in clubs and design-build competitions as well as internships with longtime industry partners.Additionally, valuable contacts are made in student chapters of professional organizations such as IEEE and IISE/INCOSE and at specially scheduled events with industry leaders." translateX="-300.0" wrappingWidth="1000.0" />
                     </children></VBox>
                 <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Proxima Nova Regular; -fx-font-weight: bold; -fx-font-size: 50;" text="Engagement" translateX="-300.0" GridPane.columnIndex="1" />
                 <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
@@ -121,7 +121,7 @@
                 <Insets bottom="25.0" left="125.0" />
             </GridPane.margin>
         </Text>
-        <Button fx:id="invisIdlePageBtn" mnemonicParsing="false" onAction="#goToHomePage" style="-fx-font-family: Proxima Nova Rg; -fx-font-size: 30px; -fx-background-color: rgba(139,0,21,1); -fx-text-fill: white;" text="Button" />
+        <Button fx:id="invisIdlePageBtn" mnemonicParsing="false" onAction="#goToIdlePage" style="-fx-font-family: Proxima Nova Rg; -fx-font-size: 30px; -fx-background-color: rgba(139,0,21,1); -fx-text-fill: white;" text="Button" />
     </children>
     <columnConstraints>
         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="1920.0" />
